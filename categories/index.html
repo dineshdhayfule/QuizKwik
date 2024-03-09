@@ -13,6 +13,24 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bg-gradient p-3" style="background-color: #e3f2fd;"
+        aria-label="Third navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-2 fw-bold text-body-emphasis" href="#">QuizKwik</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+                aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+           <div class="collapse navbar-collapse" id="navbarsExample03">
+               <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                </ul>
+               <div class="text-end">
+                    <button type="button" class="btn btn-outline-primary me-2 fs-5" onclick="logout()">Logout</button>
+                </div>
+           </div>
+        </div>
+    </nav> 
     <div class="container col-xxl-8 px-4 py-5" id="hero-sec">
         <div class="col">
             <h1 class="display-5 fw-normal text-body-emphasis">Choose Your Challenge: <span
@@ -89,6 +107,11 @@
            <a href="#" class="btn btn-primary">Go somewhere</a>
        </div>
    </div> -->
+   <script>
+    function logout() {
+    window.location.href = "../login/"; // Assuming login.html is in the login folder
+    }
+   </script>
 </body>
 
 </html>
