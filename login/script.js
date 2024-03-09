@@ -1,159 +1,53 @@
-let container = document.getElementById('container');
-let registerBtn = document.getElementById('register');
-let loginBtn = document.getElementById('login');
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+import {getDatabase,set,ref,get,child} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+import {getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+import {getAnalytics} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
 
-const buttons = [registerBtn, loginBtn];
+const firebaseConfig = {
+    apiKey: "AIzaSyAvs_IFsAG0_e6E-1b_YAGt7YHx5sLe2dM",
+    authDomain: "qapp-6e562.firebaseapp.com",
+    projectId: "qapp-6e562",
+    storageBucket: "qapp-6e562.appspot.com",
+    messagingSenderId: "774105995717",
+    appId: "1:774105995717:web:f3580d1d937ce038b193ac",
+    measurementId: "G-F6H92FRB74"
+};
 
-buttons.forEach(button => {
-    button.onclick = function() {
-        const action = this.id === 'register' ? 'add' : 'remove';
-        container.classList[action]('active');
-    };
-});
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth(app);
+const db = getDatabase();
+const dbref = ref(db);
 
-// const firebaseConfig = {
-//     apiKey: "AIzaSyBPsnVi74qt7GmYfRrnxT8Yv-K699r2oN0",
-//     authDomain: "qapp-92535.firebaseapp.com",
-//     projectId: "qapp-92535",
-//     storageBucket: "qapp-92535.appspot.com",
-//     messagingSenderId: "366203327801",
-//     appId: "1:366203327801:web:20f94d029821ffa90984e8",
-//     measurementId: "G-6Y2VWTFJCN"
-// };
+var email = document.getElementById('mail');
+var UserName = document.getElementById("UserName");
+var password = document.getElementById("pwd");
 
-// // Initialize Firebase
-// // const app = initializeApp(firebaseConfig);
-// // const analytics = getAnalytics(app); 
+let regis = evt => {
+    evt.preventDefault();
+    createUserWithEmailAndPassword(auth, email.value, password.value)
+        .then((credentials) => {
+            console.log(credentials);
+        }).catch(error => alert(error.message));
+}
+signup.addEventListener('submit', regis);
 
-// firebase.initializeApp(firebaseConfig);
-// // Initialize variables
-// const auth = firebase.auth()
-// const database = firebase.database()
-// // Set up our register function
-// function register() {
-//     // Get all our input fields
-//     var email = document.getElementById('email').value
-//     var password = document.getElementById('password').value
-//     var full_name = document.getElementById('username').value
-//     // email = "dineshdhayfule@gmail.com"
-//     // password = 'Dinesh@123'
-//     // fullName = "Dinesh Dhayfule"
-//     // Validate input fields
-    
-//     if (validate_email(email) == false || validate_password(password) == false) {
-//         alert('Email or Password is Outta Line!!')
-//         return
-//         // Don't continue running the code
-//     }
-//     if (validate_field(full_name) == false) {
-//         alert('One or More Extra Fields is Outta Line!!')
-//         return
-//     }
+var mail = document.getElementById('email');
+var pwd = document.getElementById("password");
 
-//     // Move on with Auth
-//     auth.createUserWithEmailAndPassword(email, password)
-//         .then(function () {
-//             // Declare user variable
-//             var user = auth.currentUser
-
-//             // Add this user to Firebase Database
-//             var database_ref = database.ref()
-
-//             // Create User data
-//             var user_data = {
-//                 email: email,
-//                 full_name: full_name,
-//             }
-
-//             // Push to Firebase Database
-//             database_ref.child('users/' + user.uid).set(user_data)
-
-//             // DOne
-//             alert('User Created!!')
-//         })
-//         .catch(function (error) {
-//             // Firebase will use this to alert of its errors
-//             var error_code = error.code
-//             var error_message = error.message
-
-//             alert(error_message)
-//         })
-// }
-
-// // Set up our login function
-// function login() {
-//     // Get all our input fields
-//     var email = document.getElementById('mail').value
-//     var password = document.getElementById('pwd').value
-
-//     // Validate input fields
-//     if (validate_email(email) == false || validate_password(password) == false) {
-//         alert('Email or Password is Outta Line!!')
-//         return
-//         // Don't continue running the code
-//     }
-
-//     auth.signInWithEmailAndPassword(email, password)
-//         .then(function () {
-//             // Declare user variable
-//             var user = auth.currentUser
-
-//             // Add this user to Firebase Database
-//             var database_ref = database.ref()
-
-//             // Create User data
-//             var user_data = {
-//                 last_login: Date.now()
-//             }
-
-//             // Push to Firebase Database
-//             database_ref.child('users/' + user.uid).update(user_data)
-
-//             // DOne
-//             alert('User Logged In!!')
-
-//         })
-//         .catch(function (error) {
-//             // Firebase will use this to alert of its errors
-//             var error_code = error.code
-//             var error_message = error.message
-
-//             alert(error_message)
-//         })
-// }
+let login = evt => {
+    evt.preventDefault();
+    signInWithEmailAndPassword(auth, mail.value, pwd.value)
+        .then((credentials) => {
+            console.log(credentials);
+            // alert("You are logged in!");
+            window.location.href="/categories/";
+        }).catch(error => alert(error.message));
+}
+signin.addEventListener('submit', login);
 
 
 
 
-// // Validate Functions
-// function validate_email(email) {
-//     expression = /^[^@]+@\w+(\.\w+)+\w$/
-//     if (expression.test(email) == true) {
-//         // Email is good
-//         return true
-//     } else {
-//         // Email is not good
-//         return false
-//     }
-// }
 
-// function validate_password(password) {
-//     // Firebase only accepts lengths greater than 6
-//     if (password < 2) {
-//         return false
-//     } else {
-//         return true
-//     }
-// }
 
-// function validate_field(field) {
-//     if (field == null) {
-//         return false
-//     }
-
-//     if (field.length <= 0) {
-//         return false
-//     } else {
-//         return true
-//     }
-// }
