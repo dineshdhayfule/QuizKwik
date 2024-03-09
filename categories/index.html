@@ -10,45 +10,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-primary bg-gradient p-3"
-        aria-label="Third navbar example">
+    <nav class="navbar navbar-expand-sm bg-primary bg-gradient p-3" aria-label="Third navbar example">
         <div class="container-fluid">
-            <a class="navbar-brand fs-2 fw-bold text-body-emphasis" href="#">QuizKwik</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
-                aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand fs-2 fw-bold text-body-emphasis" href="/index.html">QuizKwik</a>
+        
 
-           <div class="collapse navbar-collapse" id="navbarsExample03">
-               <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <div class="" id="navbarsExample03">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 </ul>
-               <div class="text-end"> 
-               
-                <div class="flex-shrink-0 dropdown">
-                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show"
-                        data-bs-toggle="dropdown" aria-expanded="true">
-                    <img width="50" height="50" src="https://img.icons8.com/ios/50/user-male-circle--v2.png" alt="user-male-circle--v2"/>
-                    </a>
-                    <ul class="dropdown-menu text-small shadow show"
-                        style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 34px, 0px);"
-                        data-popper-placement="bottom-end">
-                            <hr class="dropdown-divider">
-                        <li><button class="dropdown-item" type="button" id="light">Light Mode</button></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <!-- <li><a  href="#">Sign out</a></li> -->
-                        <li><button class="dropdown-item" type="button" onclick="logout()">Logout</button> </li>
-                    </ul>
+                <div class="text-end">
+
+                    <div class="flex-shrink-0 dropdown">
+                        <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show"
+                            data-bs-toggle="dropdown" aria-expanded="true">
+
+                            <img width="50" height="50" src="https://img.icons8.com/ios/50/user-male-circle--v2.png"
+                                alt="user-male-circle--v2" />
+                        </a>
+
+
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown link
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+                        <ul class="dropdown-menu"
+                            style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 34px, 0px);"
+                            data-popper-placement="bottom-end">
+                            <li><button class="dropdown-item" type="button" id="light">Light Mode</button></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <!-- <li><a  href="#">Sign out</a></li> -->
+                            <li><button class="dropdown-item" type="button" onclick="logout()">Logout</button> </li>
+                        </ul>
+                    </div>
                 </div>
-                </div>
-           </div>
+            </div>
         </div>
-    </nav> 
+    </nav>
     <div class="container col-xxl-8 px-4 py-5" id="hero-sec">
         <div class="col">
             <h1 class="display-5 fw-normal text-body-emphasis">Choose Your Challenge: <span
@@ -125,23 +135,21 @@
            <a href="#" class="btn btn-primary">Go somewhere</a>
        </div>
    </div> -->
-   <script>
-    function logout() {
-    document.documentElement.setAttribute('data-bs-theme','dark');
-    window.location.href = "../login/"; // Assuming login.html is in the login folder
-    }
-    document.getElementById('light').addEventListener('click',()=>{
-    if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
-    document.documentElement.setAttribute('data-bs-theme','light')
-    document.getElementById('light').innerText="Dark Mode"
-}
-else {
-    document.documentElement.setAttribute('data-bs-theme','dark')
-    document.getElementById('light').innerText="Light Mode"
-    }
-    }) 
-   
-   </script>
+    <script>
+        function logout() {
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+            window.location.href = "../login/"; // Assuming login.html is in the login folder
+        }
+        document.getElementById('light').addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
+                document.documentElement.setAttribute('data-bs-theme', 'light')
+                document.getElementById('light').innerText = "Dark Mode"
+            } else {
+                document.documentElement.setAttribute('data-bs-theme', 'dark')
+                document.getElementById('light').innerText = "Light Mode"
+            }
+        })
+    </script>
 </body>
 
 </html>
