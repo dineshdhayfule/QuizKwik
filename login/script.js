@@ -27,7 +27,7 @@ let regis = evt => {
     evt.preventDefault();
     createUserWithEmailAndPassword(auth, email.value, password.value)
         .then((credentials) => {
-            window.location.href = "/login/";
+        window.location.href = "../categories/";
         }).catch(error => alert(error.message));
 }
 signup.addEventListener('submit', regis);
