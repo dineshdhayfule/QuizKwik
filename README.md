@@ -1,2 +1,2 @@
-# Q-App
-# https://dineshdhayfule.github.io/Q-App/
+# QuizKwik
+# https://dineshdhayfule.github.io/QuizKwik/
