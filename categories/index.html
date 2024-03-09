@@ -10,10 +10,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+    
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-gradient p-3" style="background-color: #e3f2fd;"
+    <nav class="navbar navbar-expand-sm bg-primary bg-gradient p-3"
         aria-label="Third navbar example">
         <div class="container-fluid">
             <a class="navbar-brand fs-2 fw-bold text-body-emphasis" href="#">QuizKwik</a>
@@ -25,8 +26,25 @@
            <div class="collapse navbar-collapse" id="navbarsExample03">
                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 </ul>
-               <div class="text-end">
-                    <button type="button" class="btn btn-outline-primary me-2 fs-5" onclick="logout()">Logout</button>
+               <div class="text-end"> 
+               
+                <div class="flex-shrink-0 dropdown">
+                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show"
+                        data-bs-toggle="dropdown" aria-expanded="true">
+                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small shadow show"
+                        style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 34px, 0px);"
+                        data-popper-placement="bottom-end">
+                            <hr class="dropdown-divider">
+                        <li><button class="dropdown-item" type="button" id="light">Light Mode</button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <!-- <li><a  href="#">Sign out</a></li> -->
+                        <li><button class="dropdown-item" type="button" onclick="logout()">Logout</button> </li>
+                    </ul>
+                </div>
                 </div>
            </div>
         </div>
@@ -109,8 +127,20 @@
    </div> -->
    <script>
     function logout() {
+    document.documentElement.setAttribute('data-bs-theme','dark');
     window.location.href = "../login/"; // Assuming login.html is in the login folder
     }
+    document.getElementById('light').addEventListener('click',()=>{
+    if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
+    document.documentElement.setAttribute('data-bs-theme','light')
+    document.getElementById('light').innerText="Dark Mode"
+}
+else {
+    document.documentElement.setAttribute('data-bs-theme','dark')
+    document.getElementById('light').innerText="Light Mode"
+    }
+    }) 
+   
    </script>
 </body>
 
