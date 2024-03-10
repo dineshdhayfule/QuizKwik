@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-
+<script src="script.js"></script>
 </head>
 
 <body>
@@ -31,19 +31,6 @@
                             <img width="50" height="50" src="https://img.icons8.com/ios/50/user-male-circle--v2.png"
                                 alt="user-male-circle--v2" />
                         </a>
-
-
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown link
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li> -->
                         <ul class="dropdown-menu"
                             style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 34px, 0px);"
                             data-popper-placement="bottom-end">
@@ -135,21 +122,6 @@
            <a href="#" class="btn btn-primary">Go somewhere</a>
        </div>
    </div> -->
-    <script>
-        function logout() {
-            document.documentElement.setAttribute('data-bs-theme', 'dark');
-            window.location.href = "../login/"; // Assuming login.html is in the login folder
-        }
-        document.getElementById('light').addEventListener('click', () => {
-            if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
-                document.documentElement.setAttribute('data-bs-theme', 'light')
-                document.getElementById('light').innerText = "Dark Mode"
-            } else {
-                document.documentElement.setAttribute('data-bs-theme', 'dark')
-                document.getElementById('light').innerText = "Light Mode"
-            }
-        })
-    </script>
 </body>
 
 </html>

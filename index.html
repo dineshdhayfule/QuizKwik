@@ -13,30 +13,34 @@
     </script>
 </head>
 
-<body>
+<body onload="userP()">
 
     <nav class="navbar navbar-expand-lg fixed-top p-3 bg-primary bg-gradient" aria-label="Third navbar example">
         <div class="container-fluid">
             <a class="navbar-brand fs-2 fw-bold text-body-emphasis" href="/index.html" >QuizKwik</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
                 aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span >
+                    <img src="images/menu.svg" alt="" width="35" height="40">
+                </span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarsExample03">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <!-- <ul class="navbar-nav ml-auto tab-element"> -->
                     <li><a href="#hero-sec" class="nav-link px-2 link-secondary text-white fs-5">Home</a></li>
                     <li><a href="#hanging-icons" class="nav-link px-2 link-secondary text-white fs-5">Features</a></li>
                     <li><a href="#about" class="nav-link px-2 link-secondary text-white fs-5">About</a></li>
                     <li><a href="#contact" class="nav-link px-2 link-secondary text-white fs-5">Contact</a></li>
                 </ul>
-               <label class="switch" >
-                   <input type="checkbox" id="light">
-                   <span class="slider round"></span>
-               </label>
-                    <a class="px-3 text-center" href="login/"><button type="button"
-                            class="btn btn-warning fs-5">Sign-up</button></a>
-                    <a href="login/"><button type="button" class="btn btn-outline-light me-2 fs-5">Login</button></a>
+               <div class="tab-element px-3 text-center">
+                    <label class="switch ">
+                        <input type="checkbox" id="light">
+                        <span class="slider round"></span>
+                    </label>
+                    <a href="login/"><button type="button"class="btn btn-warning fs-5">Sign-up</button></a>
+                    <a href="login/"><button type="button" class="btn btn-outline-light fs-5">Login</button></a>
+               </div>
                 </div>
             </div>
         </div>
