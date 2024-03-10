@@ -34,7 +34,7 @@
                         <ul class="dropdown-menu"
                             style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 34px, 0px);"
                             data-popper-placement="bottom-end">
-                            <li><button class="dropdown-item" onclick="mode()" id="light">Light Mode</button></li>
+                            <li><button class="dropdown-item" id="light">Light Mode</button></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -123,5 +123,15 @@
        </div>
    </div> -->
 </body>
-
+<script >
+    document.getElementById('light').addEventListener('click', () => {
+    if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
+    document.documentElement.setAttribute('data-bs-theme', 'light')
+    document.getElementById('light').innerText = "Dark Mode"
+    } else {
+    document.documentElement.setAttribute('data-bs-theme', 'dark')
+    document.getElementById('light').innerText = "Light Mode"
+    }
+    })
+</script>
 </html>
