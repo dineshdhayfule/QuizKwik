@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Receiver</title>
+</head>
+
+<body>
+    <h2>Button Click Receiver</h2>
+    <p id="clickedButton"></p>
+
+    <script>
+        // Function to get the query parameter from URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the clicked button number from the URL
+        const clickedButton = getQueryParam("button");
+
+        // Display the clicked button number
+        if (clickedButton) {
+            document.getElementById("clickedButton").innerText = "Button " + clickedButton + " was clicked.";
+        } else {
+            document.getElementById("clickedButton").innerText = "No button was clicked.";
+        }
+    </script>
+</body>
+
+</html>

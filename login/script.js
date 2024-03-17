@@ -43,13 +43,13 @@ let regis = evt => {
     createUserWithEmailAndPassword(auth, email.value, password.value)
         .then((credentials) => {
 
-        const userId = auth.currentUser.uid;
+            const userId = auth.currentUser.uid;
             set(ref(db, 'users/' + userId), {
                 username: UserName.value,
                 email: email.value,
                 password: password.value
             });
-           
+
             alert('Saved')
             window.location.href = "../categories/";
         }).catch(error => alert(error.message));
