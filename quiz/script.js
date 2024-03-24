@@ -188,17 +188,10 @@ function showResult() {
     result_box.classList.add("activeResult");
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 10) {
-
-        let scoreTag = '<span>and congrats! 🎉, You got <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
-        scoreText.innerHTML = scoreTag;
-    } else if (userScore > 6) {
-        let scoreTag = '<span>and nice 😎, You got <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
-        scoreText.innerHTML = scoreTag;
-    } else {
-        let scoreTag = '<span>and sorry 😐, You got only <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
-        scoreText.innerHTML = scoreTag;
     }
-}
+    let scoreTag = '<span>and You got<p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>'
+    scoreText.innerHTML = scoreTag;
+    }
 
 function startTimer(time) {
     counter = setInterval(timer, 1000);

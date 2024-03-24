@@ -9,14 +9,14 @@
 }
 
 body {
-    background-color: #00ff62;
+    background-color: #73f1e6;
     /* background-color: linear-gradient(45deg, #ffea74, #e61aa4, #4222ff); */
 
 }
 
 ::selection {
     color: #fff;
-    background-color: #00ff62;
+    background-color: #000000;
 }
 
 /* .start_btn, */
@@ -27,7 +27,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: drop-shadow(30px 10px 4px #4444dd);
 }
 
 
@@ -53,11 +53,11 @@ body {
     cursor: pointer;
 } */
 
-.stbutton:hover {
+/* .stbutton:hover {
     background-color: #000000;
     color: #00ff62;
 
-}
+} */
 
 .info_box {
     width: 540px;
@@ -67,13 +67,8 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    box-shadow: 10px 10px 20px rgb(0, 0, 0), -10px -10px 20px rgb(0, 0, 0);
-
-}
-
-.info_box:hover {
-
     box-shadow: 10px 10px 10px #0000007f, -10px -10px 10px #0000007f;
+
 }
 
 .info_box .info-title {
@@ -138,14 +133,11 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    box-shadow: 20px 20px 20px rgb(0, 0, 0), -20px -20px 20px rgb(0, 0, 0);
-
-}
-
-.quiz_box:hover {
-
+    /* box-shadow: 20px 20px 20px rgb(0, 0, 0), -20px -20px 20px rgb(0, 0, 0); */
     box-shadow: 10px 10px 10px #0000007f, -10px -10px 10px #0000007f;
+
 }
+
 
 .quiz_box header {
     position: relative;
@@ -352,13 +344,12 @@ footer button.show {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    box-shadow: 20px 20px 20px rgb(0, 0, 0), -20px -20px 20px rgb(0, 0, 0);
+    /* box-shadow: 20px 20px 20px rgb(0, 0, 0), -20px -20px 20px rgb(0, 0, 0); */
 
-}
-
-.result_box:hover {
     box-shadow: 10px 10px 10px #0000007f, -10px -10px 10px #0000007f;
 }
+
+
 
 .result_box .icon {
     font-size: 100px;

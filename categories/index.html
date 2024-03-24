@@ -22,7 +22,7 @@
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 </ul>
                 <div class="text-end">
-
+                        <div id="txt"></div>
                     <div class="flex-shrink-0 dropdown">
                         <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show"
                             data-bs-toggle="dropdown" aria-expanded="true">
@@ -117,5 +117,53 @@
     </div>
 
    <script src="script.js"></script>
+   <script type="module">
+    import {
+    initializeApp
+    } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import {
+    getDatabase,
+    set,
+    ref,
+    get,
+    child
+    } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+    import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword
+    } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+    import {
+    getAnalytics
+    } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyAvs_IFsAG0_e6E-1b_YAGt7YHx5sLe2dM",
+    authDomain: "qapp-6e562.firebaseapp.com",
+    projectId: "qapp-6e562",
+    storageBucket: "qapp-6e562.appspot.com",
+    messagingSenderId: "774105995717",
+    appId: "1:774105995717:web:f3580d1d937ce038b193ac",
+    measurementId: "G-F6H92FRB74"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+    const db = getDatabase();
+    const dbref = ref(db);
+    const user = auth.currentUser;
+
+//     alert("hi")
+
+//  if (user) {
+//  // User is signed in.
+//  var userName = user.username;
+//  alert(userName)
+// } else {
+//      window.location.href = "../login/";
+//  }
+
+   </script>
 </body>
 </html>
