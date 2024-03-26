@@ -240,3 +240,35 @@ function queCounter(index) {
     let totalQueCounTag = '<span><p>' + index + '</p> of <p>' + questions.length + '</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag; //adding new span tag inside bottom_ques_counter
 }
+
+
+// code for window
+
+var isActive = true;
+
+function handleVisibilityChange() {
+    if (document.hidden) {
+        // User switched tabs, take action here
+        isActive = false;
+        alert("Please focus on this tab!");
+    } else {
+        // User returned to the tab
+        isActive = true;
+    }
+}
+
+document.addEventListener("visibilitychange", handleVisibilityChange, false);
+
+// Example: Disabling right-click context menu to deter users from opening new tabs
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
+
+// Example: Alert user if they try to leave the page
+window.addEventListener("beforeunload", function (e) {
+    if (!isActive) {
+        var confirmationMessage = "Are you sure you want to leave?"; // Custom message
+        (e || window.event).returnValue = confirmationMessage;
+        return confirmationMessage;
+    }
+});

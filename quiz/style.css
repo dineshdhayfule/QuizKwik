@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    user-select: none;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: drop-shadow(30px 10px 4px #4444dd);
+    /* filter: drop-shadow(30px 10px 4px #4444dd); */
 }
 
 
