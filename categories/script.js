@@ -37,6 +37,17 @@ document.getElementById("cA").addEventListener("click", function () {
 document.getElementById("javaA").addEventListener("click", function () {
     setCookie("choice", "5", 30);
 });
+
+document.getElementById("pythonA").addEventListener("click", function () {
+    setCookie("choice", "6", 30);
+});
+document.getElementById("cppA").addEventListener("click", function () {
+    setCookie("choice", "7", 30);
+});
+
+document.getElementById("phpA").addEventListener("click", function () {
+    setCookie("choice", "8", 30);
+});
 // Set a cookie with a specified name, value, and expiration date
 function setCookie(cookieName, cookieValue, expirationDays) {
     var d = new Date();

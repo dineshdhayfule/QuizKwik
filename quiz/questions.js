@@ -559,3 +559,342 @@ let javaquestions = [
         ]
     }
 ];
+
+let pythonQuestions = [
+    {
+        numb: 1,
+        question: "Which of the following is NOT a valid variable name in Python?",
+        answer: "2variable",
+        options: [
+            "my_variable",
+            "variable2",
+            "myVariable",
+            "2variable"
+        ]
+    },
+    {
+        numb: 2,
+        question: "What is the output of the following code snippet?\n\n```python\nx = 'hello'\nprint(x[::-1])\n```",
+        answer: "olleh",
+        options: [
+            "hello",
+            "olleh",
+            "olle",
+            "loleh"
+        ]
+    },
+    {
+        numb: 3,
+        question: "Which keyword is used to define a function in Python?",
+        answer: "def",
+        options: [
+            "function",
+            "fun",
+            "define",
+            "def"
+        ]
+    },
+    {
+        numb: 4,
+        question: "What is the result of 9 / 2 in Python 3?",
+        answer: "4.5",
+        options: [
+            "4",
+            "4.5",
+            "5",
+            "Error"
+        ]
+    },
+    {
+        numb: 5,
+        question: "What is the output of the following code snippet?\n\n```python\nx = [1, 2, 3]\nprint(x * 2)\n```",
+        answer: "[1, 2, 3, 1, 2, 3]",
+        options: [
+            "[1, 2, 3, 1, 2, 3]",
+            "[1, 2, 3, 2, 4, 6]",
+            "[2, 4, 6]",
+            "Error"
+        ]
+    },
+    {
+        numb: 6,
+        question: "Which of the following is used to comment multiple lines in Python?",
+        answer: "Triple quotes",
+        options: [
+            "Double slashes (//)",
+            "Hash symbol (#)",
+            "Triple quotes",
+            "Single quotes"
+        ]
+    },
+    {
+        numb: 7,
+        question: "What is the output of the following code snippet?\n\n```python\nx = (1, 2, 3)\nx[1] = 4\nprint(x)\n```",
+        answer: "Error",
+        options: [
+            "(1, 2, 3)",
+            "(1, 4, 3)",
+            "Error",
+            "[1, 4, 3]"
+        ]
+    },
+    {
+        numb: 8,
+        question: "What will be the output of the following code snippet?\n\n```python\nfor i in range(3):\n    print(i)\n```",
+        answer: "0\n1\n2",
+        options: [
+            "0\n1\n2",
+            "0\n1\n2\n3",
+            "1\n2\n3",
+            "Error"
+        ]
+    },
+    {
+        numb: 9,
+        question: "What does the 'pass' statement do in Python?",
+        answer: "It is a null operation; nothing happens when it is executed.",
+        options: [
+            "It stops the execution of the program.",
+            "It is used to create a loop.",
+            "It is a null operation; nothing happens when it is executed.",
+            "It prints 'pass' to the console."
+        ]
+    },
+    {
+        numb: 10,
+        question: "Which of the following is NOT a valid data type in Python?",
+        answer: "char",
+        options: [
+            "int",
+            "float",
+            "str",
+            "char"
+        ]
+    }
+];
+
+let cppQuestions = [
+    {
+        numb: 1,
+        question: "Which of the following is NOT a valid C++ keyword?",
+        answer: "function",
+        options: [
+            "if",
+            "else",
+            "function",
+            "for"
+        ]
+    },
+    {
+        numb: 2,
+        question: "What is the output of the following code snippet?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int x = 5;\n    cout << ++x;\n    return 0;\n}\n```",
+        answer: "6",
+        options: [
+            "5",
+            "6",
+            "Compiler Error",
+            "Undefined Behavior"
+        ]
+    },
+    {
+        numb: 3,
+        question: "Which operator is used to allocate memory dynamically in C++?",
+        answer: "new",
+        options: [
+            "malloc",
+            "calloc",
+            "new",
+            "allocate"
+        ]
+    },
+    {
+        numb: 4,
+        question: "What is the correct way to declare a pointer in C++?",
+        answer: "int *ptr;",
+        options: [
+            "int ptr;",
+            "int ptr();",
+            "int ptr[];",
+            "int *ptr;"
+        ]
+    },
+    {
+        numb: 5,
+        question: "What is the output of the following code snippet?\n\n```cpp\nint arr[5] = {1, 2, 3, 4, 5};\nint *ptr = arr;\ncout << *(ptr + 2);\n```",
+        answer: "3",
+        options: [
+            "3",
+            "2",
+            "4",
+            "Compiler Error"
+        ]
+    },
+    {
+        numb: 6,
+        question: "What does the 'endl' keyword do in C++?",
+        answer: "It inserts a newline character and flushes the output buffer.",
+        options: [
+            "It ends the program execution.",
+            "It indicates the end of a loop.",
+            "It inserts a space character.",
+            "It inserts a newline character and flushes the output buffer."
+        ]
+    },
+    {
+        numb: 7,
+        question: "What is the correct way to define a class member function outside the class definition in C++?",
+        answer: "returnType className::functionName() { }",
+        options: [
+            "className::returnType functionName() { }",
+            "functionName::returnType className() { }",
+            "returnType functionName::className() { }",
+            "returnType className::functionName() { }"
+        ]
+    },
+    {
+        numb: 8,
+        question: "Which of the following is NOT a valid access specifier in C++?",
+        answer: "protectedd",
+        options: [
+            "public",
+            "private",
+            "protected",
+            "protectedd"
+        ]
+    },
+    {
+        numb: 9,
+        question: "What is the output of the following code snippet?\n\n```cpp\ncout << (5 > 3) + (7 < 9);\n```",
+        answer: "2",
+        options: [
+            "0",
+            "1",
+            "2",
+            "Compiler Error"
+        ]
+    },
+    {
+        numb: 10,
+        question: "What does the 'const' keyword indicate in C++?",
+        answer: "It indicates that the value of a variable cannot be changed.",
+        options: [
+            "It indicates that a variable must be initialized at the time of declaration.",
+            "It indicates that a variable can be accessed from any part of the program.",
+            "It indicates that the value of a variable cannot be changed.",
+            "It indicates that a function cannot modify the object it is called on."
+        ]
+    }
+];
+
+let phpQuestions = [
+    {
+        numb: 1,
+        question: "What does PHP stand for?",
+        answer: "Hypertext Preprocessor",
+        options: [
+            "Hypertext Preprocessor",
+            "Personal Home Page",
+            "Preprocessed Hypertext",
+            "Program Hyper Processor"
+        ]
+    },
+    {
+        numb: 2,
+        question: "Which symbol is used to denote a single-line comment in PHP?",
+        answer: "//",
+        options: [
+            "//",
+            "#",
+            "--",
+            "/* */"
+        ]
+    },
+    {
+        numb: 3,
+        question: "What will be the output of the following PHP code snippet?\n\n```php\necho strlen('Hello World');\n```",
+        answer: "11",
+        options: [
+            "10",
+            "11",
+            "12",
+            "5"
+        ]
+    },
+    {
+        numb: 4,
+        question: "What is the correct way to start a PHP script?",
+        answer: "<?php",
+        options: [
+            "<?php",
+            "<?",
+            "<script>",
+            "<php>"
+        ]
+    },
+    {
+        numb: 5,
+        question: "Which PHP function is used to read a file into a string?",
+        answer: "file_get_contents()",
+        options: [
+            "readfile()",
+            "fread()",
+            "file_get_contents()",
+            "file_read()"
+        ]
+    },
+    {
+        numb: 6,
+        question: "Which PHP superglobal array contains information about headers, paths, and script locations?",
+        answer: "$_SERVER",
+        options: [
+            "$_POST",
+            "$_GET",
+            "$_REQUEST",
+            "$_SERVER"
+        ]
+    },
+    {
+        numb: 7,
+        question: "What is the default method for passing data to a PHP script using HTML forms?",
+        answer: "GET",
+        options: [
+            "POST",
+            "GET",
+            "PUT",
+            "REQUEST"
+        ]
+    },
+    {
+        numb: 8,
+        question: "What does the function 'isset()' do in PHP?",
+        answer: "Checks if a variable is set and is not NULL",
+        options: [
+            "Declares a variable",
+            "Assigns a value to a variable",
+            "Checks if a variable is set and is not NULL",
+            "Unsets a variable"
+        ]
+    },
+    {
+        numb: 9,
+        question: "What will be the output of the following PHP code snippet?\n\n```php\n$x = 5;\n$y = '5';\nif ($x === $y) {\n    echo 'Equal';\n} else {\n    echo 'Not Equal';\n}\n```",
+        answer: "Not Equal",
+        options: [
+            "Equal",
+            "Not Equal",
+            "Error",
+            "Undefined"
+        ]
+    },
+    {
+        numb: 10,
+        question: "Which PHP function is used to redirect the user to a different URL?",
+        answer: "header()",
+        options: [
+            "redirect()",
+            "location()",
+            "header()",
+            "forward()"
+        ]
+    }
+];

@@ -111,6 +111,21 @@ else if (receivedValue == 5) {
     questions = javaquestions;
     document.getElementById("title").innerHTML = "Java Quiz"
 }
+else if (receivedValue == 6) {
+
+    questions = pythonQuestions;
+    document.getElementById("title").innerHTML = "Python Quiz"
+}
+else if (receivedValue == 7) {
+
+    questions = cppQuestions;
+    document.getElementById("title").innerHTML = "C++ Quiz"
+}
+else if (receivedValue == 8) {
+
+    questions = phpQuestions;
+    document.getElementById("title").innerHTML = "PHP Quiz"
+}
 else {
     questions = javaquestions;
     document.getElementById("title").innerHTML = "Java Quiz"
