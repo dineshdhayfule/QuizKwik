@@ -48,6 +48,10 @@ document.getElementById("cppA").addEventListener("click", function () {
 document.getElementById("phpA").addEventListener("click", function () {
     setCookie("choice", "8", 30);
 });
+
+document.getElementById("sqlA").addEventListener("click", function () {
+    setCookie("choice", "9", 30);
+});
 // Set a cookie with a specified name, value, and expiration date
 function setCookie(cookieName, cookieValue, expirationDays) {
     var d = new Date();

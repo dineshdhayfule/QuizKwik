@@ -898,3 +898,115 @@ let phpQuestions = [
         ]
     }
 ];
+let sqlQuestions = [
+    {
+        numb: 1,
+        question: "What does SQL stand for?",
+        answer: "Structured Query Language",
+        options: [
+            "Structured Query Language",
+            "Sequential Query Language",
+            "Simple Query Language",
+            "Standard Query Language"
+        ]
+    },
+    {
+        numb: 2,
+        question: "Which SQL keyword is used to retrieve data from a database?",
+        answer: "SELECT",
+        options: [
+            "GET",
+            "FETCH",
+            "RETRIEVE",
+            "SELECT"
+        ]
+    },
+    {
+        numb: 3,
+        question: "Which SQL command is used to insert new data into a database?",
+        answer: "INSERT INTO",
+        options: [
+            "ADD",
+            "INSERT INTO",
+            "CREATE",
+            "UPDATE"
+        ]
+    },
+    {
+        numb: 4,
+        question: "What does the SQL command 'DELETE FROM' do?",
+        answer: "Deletes records from a table",
+        options: [
+            "Deletes a table",
+            "Deletes a database",
+            "Deletes records from a table",
+            "Deletes a column from a table"
+        ]
+    },
+    {
+        numb: 5,
+        question: "What does the SQL command 'UPDATE' do?",
+        answer: "Modifies existing records in a table",
+        options: [
+            "Adds new records to a table",
+            "Deletes records from a table",
+            "Modifies existing records in a table",
+            "Retrieves data from a table"
+        ]
+    },
+    {
+        numb: 6,
+        question: "Which SQL clause is used to filter the result set based on a specified condition?",
+        answer: "WHERE",
+        options: [
+            "HAVING",
+            "FILTER",
+            "WHERE",
+            "CONDITION"
+        ]
+    },
+    {
+        numb: 7,
+        question: "What does the SQL command 'GROUP BY' do?",
+        answer: "Groups rows that have the same values into summary rows",
+        options: [
+            "Orders the result set in ascending order",
+            "Filters the result set based on a specified condition",
+            "Joins multiple tables together",
+            "Groups rows that have the same values into summary rows"
+        ]
+    },
+    {
+        numb: 8,
+        question: "Which SQL function is used to find the maximum value of a column?",
+        answer: "MAX()",
+        options: [
+            "MIN()",
+            "MAX()",
+            "SUM()",
+            "AVG()"
+        ]
+    },
+    {
+        numb: 9,
+        question: "What does the SQL command 'ORDER BY' do?",
+        answer: "Sorts the result set in ascending or descending order",
+        options: [
+            "Filters the result set based on a specified condition",
+            "Groups rows that have the same values into summary rows",
+            "Sorts the result set in ascending or descending order",
+            "Joins multiple tables together"
+        ]
+    },
+    {
+        numb: 10,
+        question: "Which SQL statement is used to create a new table?",
+        answer: "CREATE TABLE",
+        options: [
+            "ADD TABLE",
+            "NEW TABLE",
+            "CREATE TABLE",
+            "MAKE TABLE"
+        ]
+    }
+];

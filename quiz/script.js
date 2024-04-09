@@ -126,6 +126,11 @@ else if (receivedValue == 8) {
     questions = phpQuestions;
     document.getElementById("title").innerHTML = "PHP Quiz"
 }
+else if (receivedValue == 9) {
+
+    questions = sqlQuestions;
+    document.getElementById("title").innerHTML = "SQL Quiz"
+}
 else {
     questions = javaquestions;
     document.getElementById("title").innerHTML = "Java Quiz"
