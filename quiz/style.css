@@ -24,6 +24,7 @@ body {
 .info_box,
 .quiz_box,
 .result_box {
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -419,14 +420,14 @@ footer button.show {
 @media (max-width:1300px) {
 
     .info_box {
-        width: fit-content;
+        width: 21rem;
         margin: 0% auto;
         height: fit-content;
         padding: 5px;
     }
 
     .quiz_box {
-        width: fit-content;
+        width: 21rem;
         margin: 0% auto;
         height: fit-content;
         padding: 5px;
@@ -434,7 +435,7 @@ footer button.show {
     }
 
     .result_box {
-        width: fit-content;
+        width: 21rem;
         margin: 0% auto;
     }
 }

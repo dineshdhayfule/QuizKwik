@@ -9,7 +9,9 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
-var element = document.getElementById("stbtn");
+var element = document.getElementById("stbtn"); 
+let receivedValue = getCookie("choice");
+
 // let questions = htmlquestions;
 document.addEventListener("contextmenu", (event) => {
     event.preventDefault();
@@ -22,7 +24,7 @@ info_box.classList.add("activeInfo");
 exit_btn.onclick = () => {
     info_box.classList.remove("activeInfo");
     // element.classList.remove("start_btn");
-    window.location.href = "../categories/"; 
+    window.location.href = "../categories/";
 
 }
 
@@ -86,28 +88,32 @@ function getCookie(cookieName) {
     return null;
 }
 
-let receivedValue = getCookie("choice");
 
-if (receivedValue==1) {
-    
+
+if (receivedValue == 1) {
     questions = htmlquestions;
+    document.getElementById("title").innerHTML = "HTML QUIZ"; 
 }
 else if (receivedValue == 2) {
-
     questions = cssquestions;
+    document.getElementById("title").innerHTML = "CSS Quiz"
 } else if (receivedValue == 3) {
-
     questions = jsquestions;
-} else if (receivedValue == 4) {
+    document.getElementById("title").innerHTML = "JS Quiz"
 
+} else if (receivedValue == 4) {
     questions = cquestions;
+    document.getElementById("title").innerHTML = "C Quiz"
+
 }
 else if (receivedValue == 5) {
 
     questions = javaquestions;
+    document.getElementById("title").innerHTML = "Java Quiz"
 }
-else{
+else {
     questions = javaquestions;
+    document.getElementById("title").innerHTML = "Java Quiz"
 
 }
 // if Next Que button clicked
@@ -191,7 +197,7 @@ function showResult() {
     }
     let scoreTag = '<span>and You got<p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>'
     scoreText.innerHTML = scoreTag;
-    }
+}
 
 function startTimer(time) {
     counter = setInterval(timer, 1000);
@@ -244,31 +250,31 @@ function queCounter(index) {
 
 // code for window
 
-var isActive = true;
+// var isActive = true;
 
-function handleVisibilityChange() {
-    if (document.hidden) {
-        // User switched tabs, take action here
-        isActive = false;
-        alert("Please focus on this tab!");
-    } else {
-        // User returned to the tab
-        isActive = true;
-    }
-}
+// function handleVisibilityChange() {
+//     if (document.hidden) {
+//         // User switched tabs, take action here
+//         isActive = false;
+//         alert("Please focus on this tab!");
+//     } else {
+//         // User returned to the tab
+//         isActive = true;
+//     }
+// }
 
-document.addEventListener("visibilitychange", handleVisibilityChange, false);
+// document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
-// Example: Disabling right-click context menu to deter users from opening new tabs
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-});
+// // Example: Disabling right-click context menu to deter users from opening new tabs
+// document.addEventListener("contextmenu", function (e) {
+//     e.preventDefault();
+// });
 
-// Example: Alert user if they try to leave the page
-window.addEventListener("beforeunload", function (e) {
-    if (!isActive) {
-        var confirmationMessage = "Are you sure you want to leave?"; // Custom message
-        (e || window.event).returnValue = confirmationMessage;
-        return confirmationMessage;
-    }
-});
+// // Example: Alert user if they try to leave the page
+// window.addEventListener("beforeunload", function (e) {
+//     if (!isActive) {
+//         var confirmationMessage = "Are you sure you want to leave?"; // Custom message
+//         (e || window.event).returnValue = confirmationMessage;
+//         return confirmationMessage;
+//     }
+// });
