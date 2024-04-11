@@ -50,7 +50,7 @@ let regis = evt => {
                 password: password.value
             });
 
-            alert('Saved')
+            console.log('Saved')
             window.location.href = "../categories/";
         }).catch(error => alert(error.message));
 }
