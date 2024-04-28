@@ -391,7 +391,7 @@ footer button.show {
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 2.5px solid #00ff62;
+    border: 1.5px solid #00ff62;
     transition: all 0.3s ease;
 }
 

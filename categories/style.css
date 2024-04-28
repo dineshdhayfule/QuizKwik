@@ -1,6 +1,7 @@
 @media (max-width:1300px) {
 
     .c {
+        width:fit-content;
         display: flex;
         justify-content: center;
         align-items: center;
