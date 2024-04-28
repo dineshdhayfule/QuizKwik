@@ -34,11 +34,11 @@ continue_btn.onclick = () => {
     quiz_box.classList.add("activeQuiz");
     showQuetions(0);
     queCounter(1);
-    startTimer(15);
+    startTimer(30);
     startTimerLine(0);
 }
 
-let timeValue = 15;
+let timeValue = 30;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
@@ -53,7 +53,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 restart_quiz.onclick = () => {
     quiz_box.classList.add("activeQuiz");
     result_box.classList.remove("activeResult");
-    timeValue = 15;
+    timeValue = 30;
     que_count = 0;
     que_numb = 1;
     userScore = 0;

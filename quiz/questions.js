@@ -365,7 +365,7 @@ let cquestions = [
         options: [
             "Frees dynamically allocated memory",
             "Declares a pointer",
-            "Allocates memory statically",
+            "Allocates memory dynamically",
             "Initializes memory to zero"
         ]
     },
@@ -376,7 +376,7 @@ let cquestions = [
         options: [
             "/* */",
             "//",
-            "<!-- -->",
+            " < ! - - - - > ",
             "#"
         ]
     },
@@ -823,12 +823,12 @@ let phpQuestions = [
     {
         numb: 4,
         question: "What is the correct way to start a PHP script?",
-        answer: "<?php",
+        answer: "< ? php ",
         options: [
-            "<?php",
-            "<?",
-            "<script>",
-            "<php>"
+            "< ? php ",
+            " < ? ",
+            " < script > ",
+            " < php > "
         ]
     },
     {
@@ -1009,4 +1009,4 @@ let sqlQuestions = [
             "MAKE TABLE"
         ]
     }
-];
+]; 
