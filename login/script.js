@@ -17,6 +17,12 @@ import {
     getAnalytics
 } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
 
+
+// aos 
+AOS.init({
+    easing: 'ease-in-out-sine'
+});
+
 const firebaseConfig = {
     apiKey: "AIzaSyAvs_IFsAG0_e6E-1b_YAGt7YHx5sLe2dM",
     authDomain: "qapp-6e562.firebaseapp.com",
