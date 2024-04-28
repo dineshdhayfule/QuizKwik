@@ -1,0 +1,9 @@
+@media (max-width:1300px) {
+
+    .c {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
