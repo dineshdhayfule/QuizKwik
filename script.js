@@ -7,3 +7,9 @@
          document.getElementById('light').innerText = "Light Mode"
      }
  })
+
+
+AOS.init({
+    easing: 'ease-in-out-sine'
+});
+// AOS.scroll();
