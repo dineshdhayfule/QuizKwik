@@ -12,12 +12,10 @@ document.getElementById('light').addEventListener('click', () => {
         document.documentElement.setAttribute('data-bs-theme', 'dark')
         document.getElementById('light').innerText = "Light Mode"
     }
-});
+})
 
- function logout() {
-     
-        window.location.href = "../login/"; 
-}
+
+
  
 document.getElementById("htmlA").addEventListener("click", function () {
     setCookie("choice", "1", 30);
@@ -62,4 +60,7 @@ function setCookie(cookieName, cookieValue, expirationDays) {
     document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
 }
 
-
+ function logout() {
+     
+        window.location.href = "../login/"; 
+}

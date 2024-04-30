@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #73f1e6;
+    background-color: rgb(13 110 253);
     /* background-color: linear-gradient(45deg, #ffea74, #e61aa4, #4222ff); */
 
 }
@@ -69,7 +69,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    box-shadow: 10px 10px 10px #0000007f, -10px -10px 10px #0000007f;
+    box-shadow: 09px 09px;
 
 }
 
@@ -414,7 +414,7 @@ footer button.show {
 
 .buttons button.quit:hover {
     background-color: #000000;
-    color: #00ff62;
+    color: #ff0000;
 }
 
 @media (max-width:1300px) {
@@ -437,5 +437,17 @@ footer button.show {
     .result_box {
         width: 21rem;
         margin: 0% auto;
+    }
+
+    .buttons button.restart {
+        color: #000000;
+        background: #ffffff;
+        /* border: 1px solid #000000; */
+    }
+
+    .buttons button.quit {
+        color: #000000;
+        background: #ffffff;
+        /* border: 1px solid #000000; */
     }
 }
