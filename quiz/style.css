@@ -410,6 +410,7 @@ footer button.show {
     color: #000000;
     background: #ffffff;
     border: 1px solid #000000;
+
 }
 
 .buttons button.quit:hover {
@@ -443,11 +444,15 @@ footer button.show {
         color: #000000;
         background: #ffffff;
         /* border: 1px solid #000000; */
+        overflow: hidden;
+        height: fit-content;
     }
 
     .buttons button.quit {
         color: #000000;
         background: #ffffff;
+        overflow: hidden;
+        height: fit-content;
         /* border: 1px solid #000000; */
     }
 }
