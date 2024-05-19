@@ -1,2 +1,2 @@
-# QuizKwik site link    
+# QuizKwik
 # https://dineshdhayfule.github.io/QuizKwik/
